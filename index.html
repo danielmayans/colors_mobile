@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" type="text/css" href="assets/css/jquery.mobile.flatui.css" />
+    <script type="text/javascript" src="assets/js/jquery.js"></script> 
+    <script type="text/javascript" src="assets/js/jquery.mobile-1.4.0-rc.1.js"></script> 
+  </head>
+	<script>
+		$(function(){
+		var num = Math.floor((Math.random() * 8) + 1);
+		var container = $('div#end div.container');
+		var color = "c"+num.toString();
+		container.html("<div id='"+color+"' class='c2'><a href='#mainpage' onclick='getRndm()'>START AGAIN</a></div>");
+		});
+
+		function getRndm(){
+			var num = Math.floor((Math.random() * 8) + 1);
+			var container = $('div#end div.container');
+			var color = "c"+num.toString();
+			container.html("<div id='"+color+"' class='c2'><a href='#mainpage' onclick='getRndm()'>START AGAIN</a></div>");
+		}
+	</script>
+  <style type="text/css">
+  	body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+	}
+	div#end div.container{text-align: center;}
+	div#end div.container a{padding: 0px 0px 3px 0px;margin: 0;top:50%;position:relative;color:white;font-size: 20px;text-decoration: none; border-bottom: 1px solid #fff;}
+
+	html .ui-page-theme-a{
+		background: white;
+	}
+	html .ui-page-theme-a .ui-bar-inherit{
+		background: #bdc3c7;
+		border:0;
+	}
+
+	div#c1{background: #ecf0f1;}
+	div#c2{background: #2c3e50;}
+	div#c3{background: #e74c3c;}
+	div#c4{background: #3498db;}
+
+	div#c5{background: #27ae60;}
+	div#c6{background: #e67e22;}
+	div#c7{background: #16a085;}
+	div#c8{background: #f1c40f;}
+
+	div.c1 a{padding:100%;}
+	div.c2 a{padding:100%;}
+
+	div.c1 {
+	  width: 49%;
+	  height: 100%;
+	  float: left;
+	}
+	div.c2 {	  
+	  width: 100%;
+	  height: 100%;
+	  margin-left: -203px;
+	  padding-left: 203px;
+	}
+
+	div.container {
+	  margin: 0px;
+	  height: 300px;
+	  overflow: hidden;
+	}
+  </style>
+  <body>
+    <div data-role="page" id="mainpage">
+
+	    <div data-role="header">
+	      <h1>Choose a color:</h1>
+	    </div>
+		<div data-role="content">
+			<div class="container">
+				<div id="c1" class="c1"><a href="#colors2"></a></div>
+				<div id="c2" class="c2"><a href="#colors2"></a></div>
+			</div>
+		</div>
+    </div>
+
+    <div data-role="page" id="colors2">
+	    <div data-role="header">
+	      <h1>Choose a color:</h1>
+	    </div>
+		<div data-role="content">
+			<div class="container">
+				<div id="c3" class="c1"><a href="#colors3"></a></div>
+				<div id="c4" class="c2"><a href="#colors3"></a></div>
+			</div>
+		</div>
+    </div>
+
+    <div data-role="page" id="colors3">
+	    <div data-role="header">
+	      <h1>Choose a color:</h1>
+	    </div>
+		<div data-role="content">
+			<div class="container">
+				<div id="c5" class="c1"><a href="#colors4"></a></div>
+				<div id="c6" class="c2"><a href="#colors4"></a></div>
+			</div>
+		</div>
+    </div>
+
+    <div data-role="page" id="colors4">
+	    <div data-role="header">
+	      <h1>Choose a color:</h1>
+	    </div>
+		<div data-role="content">
+			<div class="container">
+				<div id="c7" class="c1"><a href="#end"></a></div>
+				<div id="c8" class="c2"><a href="#end"></a></div>
+			</div>
+		</div>
+    </div>
+
+    <div data-role="page" id="end">
+	    <div data-role="header">
+	      <h1>YOUR FAVORITE COLOR IS</h1>
+	    </div>
+		<div data-role="content">
+			<div class="container">
+
+			</div>
+		</div>
+    </div>
+  </body>
+</html>
